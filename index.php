@@ -15,13 +15,13 @@
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div class="inline-flex flex-col items-stretch mb-20">
 
-                    <div class="flex mb-3 justify-between items-end">
+                    <div class="flex mb-5 justify-between items-end">
                         <h1 class="inline font-light text-5xl"><?php the_title(); ?></h1>
                         <h1 class="inline font-light text-gray-600"><?php echo get_the_date("F j, Y"); ?></h1>
                     </div>
 
                     <?php if (has_post_thumbnail()) : ?>
-                        <a href="<?php echo wp_get_shortlink(); ?>"><img class="shadow-xl rounded-lg inline-block" width="1024" src="<?php echo get_the_post_thumbnail_url(); ?>" /></a>
+                        <a href="<?php echo wp_get_shortlink(); ?>"><img class="shadow-xl hover:shadow-2xl rounded-lg inline-block transform transition duration-100 hover:scale-102" width="1024" src="<?php echo get_the_post_thumbnail_url(); ?>" /></a>
                     <?php endif; ?>
                 </div>
             <?php endwhile; ?>

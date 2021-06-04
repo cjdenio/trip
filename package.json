@@ -9,6 +9,6 @@
     "tailwindcss-cli": "^0.1.2"
   },
   "scripts": {
-    "build": "tailwindcss-cli build -o dist/tailwind.css"
+    "build": "tailwindcss-cli build src/style.css -o dist/tailwind.css"
   }
 }

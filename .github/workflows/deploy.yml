@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: mkdir -p ~/.ssh && echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+        name: Add SSH key
+      - run: actions/setup-node@v2
+        name: Install Node
+      - run: yarn install
+      - run: yarn build
+      - run: rsync -e "ssh -o StrictHostKeyChecking=no" -r ./* root@165.227.96.87:/home/cjdenio/trip/wp-content/themes/trip
+        name: Deploy

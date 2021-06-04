@@ -1,0 +1,14 @@
+{
+  "name": "trip",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cjdenio/trip.git",
+  "author": "Caleb Denio <cjdenio44@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss-cli": "^0.1.2"
+  },
+  "scripts": {
+    "build": "tailwindcss-cli build -o dist/tailwind.css"
+  }
+}

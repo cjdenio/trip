@@ -6,6 +6,7 @@ add_theme_support('title-tag');
 function enqueue_styles()
 {
     wp_enqueue_style("tailwind", get_template_directory_uri() . "/dist/tailwind.css");
+    wp_enqueue_script("fontawesome", "https://kit.fontawesome.com/921bd8fdbd.js");
 }
 
 function register_menus()

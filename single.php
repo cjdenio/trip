@@ -17,7 +17,7 @@
 <div class="mt-20 mx-auto" style="max-width: 1024px; width: 100%"><?php the_content(); ?></div>
 
 <div class="mt-10">
-    <a href="<?php echo get_home_url() ?>">Go back </a>
+    <a href="<?php echo get_home_url() ?>"><i class="fas fa-chevron-left mr-1"></i> Go back</a>
 </div>
 
 <?php get_footer(); ?>

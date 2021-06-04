@@ -4,3 +4,19 @@
 body {
   background-color: #fff;
 }
+
+a {
+  @apply text-blue-500 hover:text-blue-400 hover:underline;
+}
+
+.menu {
+  @apply mt-3;
+}
+
+.menu .menu-item {
+  @apply inline-block mx-2;
+}
+
+.menu-item:not(.current-menu-item) a {
+  @apply text-gray-400;
+}

@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html>
+<?php get_header() ?>
 
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url(get_stylesheet_uri()); ?>" type="text/css" />
-    <?php wp_head(); ?>
-</head>
+<?php the_post(); ?>
+<?php the_content(); ?>
 
-<body class="text-center">
-    <?php get_header() ?>
-
-    <?php the_post(); ?>
-    <div class="inline-flex flex-col">
-        <?php the_content(); ?>
-    </div>
-    <?php wp_footer(); ?>
-</body>
-
-</html>
+<?php get_footer(); ?>

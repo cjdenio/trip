@@ -20,3 +20,7 @@ a {
 .menu-item:not(.current-menu-item) a {
   @apply text-gray-400;
 }
+
+.page-content {
+  @apply w-10/12 mx-auto max-w-4xl;
+}

@@ -5,7 +5,7 @@
             <div class="inline-flex flex-col items-stretch mb-20">
 
                 <div class="flex mb-5 justify-between items-end">
-                    <a href="<?php the_permalink(); ?>">
+                    <a class="text-left" href="<?php the_permalink(); ?>">
                         <h1 class="inline font-light text-5xl"><?php the_title(); ?></h1>
                     </a>
                     <h1 class="inline font-light text-gray-600"><?php echo get_the_date("F j, Y"); ?></h1>
@@ -17,7 +17,7 @@
                             <div class="absolute top-0 right-0 z-10 text-white p-7 px-10 bg-opacity-50 bg-gray-800 rounded-bl-lg text-xl duration-100 transition opacity-0 group-hover:opacity-80">
                                 See more <i class="fas fa-chevron-right ml-3"></i>
                             </div>
-                            <img width="1024" src="<?php echo get_the_post_thumbnail_url(); ?>" />
+                            <img class="w-full" src="<?php echo get_the_post_thumbnail_url(); ?>" />
                         </div>
                     </a>
                 <?php endif; ?>

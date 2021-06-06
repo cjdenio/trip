@@ -63,3 +63,7 @@ button {
 .comment-form > p {
   @apply my-3;
 }
+
+.comment:target {
+  @apply border-2 border-blue-600 shadow-md;
+}

@@ -1,8 +1,8 @@
 <?php
-function comment_callback($comment)
+function comment_callback(WP_Comment $comment)
 {
 ?>
-    <div class="mt-3 mb-10">
+    <div class="mt-3 mb-10 comment p-3 rounded-md" id="comment-<?php echo $comment->comment_ID ?>">
         <div class="flex items-center">
             <img class="rounded-full shadow-lg w-10" src="<?php echo get_avatar_url($comment) ?>" alt="avatar" />
             <h3 class="ml-4 font-bold"><?php comment_author(); ?></h3>

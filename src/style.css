@@ -25,6 +25,41 @@ a {
   @apply w-10/12 mx-auto max-w-4xl;
 }
 
+.comment-reply-title {
+  @apply font-bold;
+}
+
 .comment-form-comment {
   @apply flex flex-col;
+}
+
+.comment-form-comment label {
+  @apply mt-3;
+}
+
+.comment-form-email label,
+.comment-form-author label {
+  @apply mr-3;
+}
+
+.form-submit {
+  @apply mt-5 !important;
+}
+
+input:not([type="submit"]),
+textarea {
+  @apply border-gray-300 focus:border-blue-600 rounded-lg border-2 px-3 py-2 text-sm !important;
+}
+
+input[type="submit"],
+button {
+  @apply text-white bg-blue-600 py-3 px-4 rounded-lg shadow-md cursor-pointer;
+}
+
+.required {
+  @apply text-red-400;
+}
+
+.comment-form > p {
+  @apply my-3;
 }

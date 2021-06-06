@@ -22,5 +22,26 @@ function register_menus()
     ]);
 }
 
+function comment_form_fields($fields) {
+    $comment_field = $fields['comment'];
+    $author_field = $fields['author'];
+    $email_field = $fields['email'];
+    $cookies_field = $fields['cookies'];
+    
+    unset( $fields['comment'] );
+    unset( $fields['author'] );
+    unset( $fields['email'] );
+    unset( $fields['url'] );
+    unset( $fields['cookies'] );
+    
+    $fields['author'] = $author_field;
+    $fields['email'] = $email_field;
+    $fields['comment'] = $comment_field;
+    
+    return $fields;
+}
+ 
+add_filter('comment_form_fields', 'comment_form_fields');
+
 add_action("wp_enqueue_scripts", "enqueue_styles");
 add_action("init", "register_menus");

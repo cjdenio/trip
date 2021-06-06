@@ -6,7 +6,7 @@ body {
 }
 
 a {
-  @apply text-blue-500 hover:text-blue-400 hover:underline;
+  @apply text-blue-500 hover:text-blue-600 hover:underline;
 }
 
 .menu {
@@ -23,4 +23,8 @@ a {
 
 .page-content {
   @apply w-10/12 mx-auto max-w-4xl;
+}
+
+.comment-form-comment {
+  @apply flex flex-col;
 }

@@ -12,7 +12,7 @@ function comment_callback(WP_Comment $comment)
             <?php endif; ?>
         </div>
 
-        <div class="mt-4 pl-3">
+        <div class="mt-4">
             <?php comment_text(); ?>
         </div>
     </div>

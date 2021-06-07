@@ -48,7 +48,7 @@ a {
 
 input:not([type="submit"]),
 textarea {
-  @apply border-gray-300 focus:border-blue-600 rounded-lg border-2 px-3 py-2 text-sm !important;
+  @apply border-gray-300 focus:border-blue-600 rounded-lg border-2 px-3 py-2 text-sm !important focus:outline-none;
 }
 
 input[type="submit"],

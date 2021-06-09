@@ -3,7 +3,7 @@
 add_theme_support("post-thumbnails");
 add_theme_support("title-tag");
 
-function enqueue_styles()
+function enqueue_styles(): void
 {
     wp_enqueue_style(
         "tailwind",
@@ -15,14 +15,14 @@ function enqueue_styles()
     );
 }
 
-function register_menus()
+function register_menus(): void
 {
     register_nav_menus([
         "header-menu" => __("Header Menu"),
     ]);
 }
 
-function comment_form_fields($fields) {
+function comment_form_fields(mixed $fields): mixed {
     $comment_field = $fields['comment'];
     $author_field = $fields['author'];
     $email_field = $fields['email'];

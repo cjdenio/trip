@@ -1,5 +1,5 @@
 <?php
-function comment_callback(WP_Comment $comment)
+function comment_callback(WP_Comment $comment): void
 {
 ?>
     <div class="mt-3 mb-10 comment p-3 rounded-md" id="comment-<?php echo $comment->comment_ID ?>">
@@ -24,8 +24,8 @@ function comment_callback(WP_Comment $comment)
     <?php if (have_comments()): ?>
         <h2 class="comments-title uppercase text-gray-400 font-bold mb-5">
             <?php printf(
-                _n("1 comment", '%1$s comments', get_comments_number()),
-                number_format_i18n(get_comments_number())
+                _n("1 comment", '%1$s comments', (int) get_comments_number()),
+                number_format_i18n((int) get_comments_number())
             ); ?>
         </h2>
 

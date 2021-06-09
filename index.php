@@ -16,7 +16,7 @@
                 </div>
 
                 <?php if (has_post_thumbnail()): ?>
-                    <a href="<?php echo esc_url(get_permalink()); ?>">
+                    <a href="<?php echo esc_url((string) get_permalink()); ?>">
                         <div class="group inline-block relative shadow-xl hover:shadow-2xl rounded-lg transform transition duration-100 hover:scale-102 overflow-hidden">
                             <div class="absolute top-0 right-0 z-10 text-white p-7 px-10 bg-opacity-50 bg-gray-800 rounded-bl-lg text-xl duration-100 transition opacity-0 group-hover:opacity-80">
                                 See more <i class="fas fa-chevron-right ml-3"></i>

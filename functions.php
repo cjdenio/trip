@@ -22,6 +22,10 @@ function register_menus(): void
     ]);
 }
 
+/**
+ * @param array<string, mixed> $fields
+ * @return array<string, mixed>
+ */
 function comment_form_fields(array $fields): array {
     $comment_field = $fields['comment'];
     $author_field = $fields['author'];

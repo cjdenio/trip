@@ -22,12 +22,11 @@ function register_menus(): void
     ]);
 }
 
-function comment_form_fields(mixed $fields): mixed {
+function comment_form_fields(array $fields): array {
     $comment_field = $fields['comment'];
     $author_field = $fields['author'];
     $email_field = $fields['email'];
-    $cookies_field = $fields['cookies'];
-    
+   
     unset( $fields['comment'] );
     unset( $fields['author'] );
     unset( $fields['email'] );

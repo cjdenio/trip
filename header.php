@@ -24,5 +24,6 @@
             <?php wp_nav_menu([
                 "theme_location" => "header-menu",
                 "fallback_cb" => false,
+                "depth" => 1,
             ]); ?>
         </div>

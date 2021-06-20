@@ -10,7 +10,7 @@
                     <a class="text-left" href="<?php the_permalink(); ?>">
                         <h1 class="inline font-light text-5xl"><?php the_title(); ?></h1>
                     </a>
-                    <h1 class="inline font-light text-gray-600"><?php echo get_the_date(
+                    <h1 class="inline font-light text-gray-600 dark:text-gray-400"><?php echo get_the_date(
                         "F j, Y"
                     ); ?></h1>
                 </div>

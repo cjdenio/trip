@@ -2,11 +2,13 @@
 @tailwind utilities;
 
 body {
-  background-color: #fff;
+  @apply bg-white text-gray-800;
+  @apply dark:bg-black dark:text-gray-200;
 }
 
 a {
   @apply text-blue-500 hover:text-blue-600 hover:underline;
+  @apply dark:text-blue-400 dark:hover:text-blue-500;
 }
 
 .menu {
@@ -48,7 +50,8 @@ a {
 
 input:not([type="submit"]),
 textarea {
-  @apply border-gray-300 focus:border-blue-600 rounded-lg border-2 px-3 py-2 text-sm !important focus:outline-none;
+  @apply border-gray-300 focus:border-blue-600 rounded-lg border-2 px-3 py-2 text-sm focus:outline-none;
+  @apply dark:bg-gray-900 dark:border-gray-700;
 }
 
 input[type="submit"],

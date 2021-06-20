@@ -4,7 +4,7 @@
 
     <div class="flex mb-5 justify-between items-end">
         <h1 class="inline font-light text-5xl text-left"><?php the_title(); ?></h1>
-        <h1 class="inline font-light text-gray-600"><?php echo get_the_date(
+        <h1 class="inline font-light text-gray-600 dark:text-gray-400"><?php echo get_the_date(
             "F j, Y"
         ); ?></h1>
     </div>

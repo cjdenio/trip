@@ -45,13 +45,20 @@ function comment_form_fields(array $fields): array {
 }
 
 // Send posts to Slack (stolen in part from https://davidwalsh.name/wordpress-publish-post-hook)
-function send_new_post(string $new_status, string $old_status, WP_Post $post) {
+function send_new_post(string $new_status, string $old_status, WP_Post $post): void {
   if('publish' === $new_status && 'publish' !== $old_status && $post->post_type === 'post') {
     // Do something!
     $thumbnail = get_the_post_thumbnail_url($post);
     $permalink = get_permalink($post);
 
-    $env = json_decode(file_get_contents(__DIR__ . "/env.json"));
+    $env_file = file_get_contents(__DIR__ . "/env.json");
+    $env = array(
+        "slack" => []
+    );
+
+    if($env_file != false) {
+        $env = json_decode($env_file);
+    }
 
     foreach ($env->slack as $webhook ) {
         $blocks = [

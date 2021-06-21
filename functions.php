@@ -48,7 +48,7 @@ function comment_form_fields(array $fields): array {
 function send_new_post(string $new_status, string $old_status, WP_Post $post) {
   if('publish' === $new_status && 'publish' !== $old_status && $post->post_type === 'post') {
     // Do something!
-    $thumbnail = get_the_post_thumbnail_url($post, "thumbnail");
+    $thumbnail = get_the_post_thumbnail_url($post);
     $permalink = get_permalink($post);
 
     $env = json_decode(file_get_contents(__DIR__ . "/env.json"));
@@ -82,14 +82,12 @@ function send_new_post(string $new_status, string $old_status, WP_Post $post) {
             "icon_url" => $webhook->icon_url
         ));
 
-        $resp = wp_remote_post($webhook->webhook, array(
+        wp_remote_post($webhook->webhook, array(
             "body" => $body,
             "headers" => array(
                 "Content-Type" => "application/json"
             )
         ));
-
-        file_put_contents(__DIR__ . "/log", print_r($resp, true));
     }
   }
 }
